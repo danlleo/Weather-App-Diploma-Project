@@ -1,0 +1,31 @@
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.forecast-container__current__date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.forecast-container__current__temp {
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--main-color);
+  font-size: 40px;
+}
+
+.forecast-container__current__place h2 {
+  color: var(--main-color);
+  font-weight: 400;
+}
+
+.forecast-container__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

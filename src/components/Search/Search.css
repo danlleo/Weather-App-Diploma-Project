@@ -1,0 +1,21 @@
+form {
+  display: flex;
+  margin-top: 1rem;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+form input[type="text"] {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+  outline: none;
+  background: transparent;
+  color: var(--main-color);
+  letter-spacing: 0.5px;
+}
+
+form svg {
+  color: var(--main-color);
+}
