@@ -9,28 +9,12 @@ const Forecast = () => {
     <div className="forecast-container">
       <div className="forecast-container__current">
         <div className="forecast-container__current__date">
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              marginRight: "1rem",
-            }}
-          >
-            <h3
-              style={{
-                marginBottom: ".5rem",
-                fontWeight: "400",
-                fontSize: "24px",
-              }}
-            >
-              Today
-            </h3>
-            <p style={{ fontSize: "14px" }}>Wed, 17 Feb</p>
+          <div className="forecast-container__current__date__day">
+            <h3>Today</h3>
+            <p>Wed, 17 Feb</p>
           </div>
           <div>
-            <FontAwesomeIcon icon={faSnowflake} size="3x" />
+            <FontAwesomeIcon icon={faSnowflake} size="4x" />
           </div>
         </div>
         <div className="forecast-container__current__temp">

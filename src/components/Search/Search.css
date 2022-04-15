@@ -1,6 +1,5 @@
 form {
   display: flex;
-  margin-top: 1rem;
   width: 100%;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }

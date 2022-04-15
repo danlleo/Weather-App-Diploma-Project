@@ -15,7 +15,7 @@ const ForecastItem = () => {
           size="2x"
           style={{ marginBottom: "1rem" }}
         />
-        <h4 style={{fontSize: "24px"}}>1°</h4>
+        <h4>50°</h4>
       </div>
     </div>
   );

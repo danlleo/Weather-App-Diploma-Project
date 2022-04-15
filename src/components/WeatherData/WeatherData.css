@@ -46,3 +46,42 @@
   font-weight: 500;
   color: #27485c;
 }
+
+@media only screen and (max-width: 950px) {
+  .data-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .data-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". ."
+      ". .";
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .data-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "."
+      "."
+      "."
+      "."
+      "."
+      "."
+      "."
+      ".";
+  }
+}
