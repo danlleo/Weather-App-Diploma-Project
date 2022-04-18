@@ -20,13 +20,16 @@ const Search = () => {
     dispatch(fetchData());
 
     await axios
-      .get("https://jsonplaceholder.typicode.com/todos/1")
+      .get(
+        `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${search}&days=1&aqi=no&alerts=no`
+      )
       .then((res) => {
         console.log(res.data);
         dispatch(handleSuccess(res.data));
       })
       .catch((err) => {
-        console.log("YO WTF");
+        console.log(err.message);
+        dispatch(handleError());
       });
 
     clearInput(setSearch);
@@ -39,6 +42,7 @@ const Search = () => {
         placeholder="E.g. New York"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
+        autoFocus
       />
     </form>
   );
