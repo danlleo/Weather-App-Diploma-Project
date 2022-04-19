@@ -1,6 +1,14 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun } from "@fortawesome/free-regular-svg-icons";
+import {
+  WiSunrise,
+  WiSunset,
+  WiHumidity,
+  WiWindy,
+  WiThermometer,
+  WiRaindrop,
+  WiDust,
+} from "react-icons/wi";
+import { MdRemoveRedEye } from "react-icons/md";
 import "./WeatherData.css";
 
 const WeatherData = () => {
@@ -24,10 +32,7 @@ const WeatherData = () => {
           </div>
           <div className="data-list__item-data">
             <h3>06:47am</h3>
-            <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: "#27485C", fontSize: "36px" }}
-            />
+            <WiSunrise />
           </div>
         </div>
         <div className="data-list__item">
@@ -36,10 +41,7 @@ const WeatherData = () => {
           </div>
           <div className="data-list__item-data">
             <h3>5:04pm</h3>
-            <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: "#27485C", fontSize: "36px" }}
-            />
+            <WiSunset />
           </div>
         </div>
         <div className="data-list__item">
@@ -48,10 +50,7 @@ const WeatherData = () => {
           </div>
           <div className="data-list__item-data">
             <h3>60%</h3>
-            <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: "#27485C", fontSize: "36px" }}
-            />
+            <WiRaindrop />
           </div>
         </div>
         <div className="data-list__item">
@@ -60,10 +59,7 @@ const WeatherData = () => {
           </div>
           <div className="data-list__item-data">
             <h3>15%</h3>
-            <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: "#27485C", fontSize: "36px" }}
-            />
+            <WiHumidity />
           </div>
         </div>
         <div className="data-list__item">
@@ -72,10 +68,7 @@ const WeatherData = () => {
           </div>
           <div className="data-list__item-data">
             <h3>17 km/h</h3>
-            <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: "#27485C", fontSize: "36px" }}
-            />
+            <WiWindy />
           </div>
         </div>
         <div className="data-list__item">
@@ -84,10 +77,7 @@ const WeatherData = () => {
           </div>
           <div className="data-list__item-data">
             <h3>1021 hPa</h3>
-            <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: "#27485C", fontSize: "36px" }}
-            />
+            <WiDust />
           </div>
         </div>
         <div className="data-list__item">
@@ -96,10 +86,7 @@ const WeatherData = () => {
           </div>
           <div className="data-list__item-data">
             <h3>26.6°</h3>
-            <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: "#27485C", fontSize: "36px" }}
-            />
+            <WiThermometer />
           </div>
         </div>
         <div className="data-list__item">
@@ -108,10 +95,7 @@ const WeatherData = () => {
           </div>
           <div className="data-list__item-data">
             <h3>50km</h3>
-            <FontAwesomeIcon
-              icon={faSun}
-              style={{ color: "#27485C", fontSize: "36px" }}
-            />
+            <MdRemoveRedEye />
           </div>
         </div>
       </div>

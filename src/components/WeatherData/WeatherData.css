@@ -39,6 +39,11 @@
 .data-list__item-data {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.data-list__item-data svg {
+  font-size: 48px;
 }
 
 .data-list__item-data h3 {
