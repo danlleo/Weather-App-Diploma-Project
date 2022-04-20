@@ -1,21 +1,21 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSnowflake } from "@fortawesome/free-regular-svg-icons";
 import "./ForecastItem.css";
 
-const ForecastItem = () => {
+const ForecastItem = ({ time, temp, image }) => {
+  const date = new Date(time);
+
   return (
     <div className="forecast-item">
       <div className="forecast-item__time">
-        <p>Time</p>
+        <p>{date.getHours()} AM</p>
       </div>
       <div className="forecast-item__container">
-        <FontAwesomeIcon
-          icon={faSnowflake}
-          size="2x"
-          style={{ marginBottom: "1rem" }}
+        <img
+          src={image}
+          alt="weather icon"
+          style={{ width: "40px", height: "40px", margin: "1rem 0" }}
         />
-        <h4>50°</h4>
+        <h4>{Math.floor(temp)}°</h4>
       </div>
     </div>
   );

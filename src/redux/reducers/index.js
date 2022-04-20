@@ -6,7 +6,8 @@ import {
 
 const initialState = {
   data: [],
-  loading: false,
+  defaultCity: "New York",
+  loading: true,
   error: false,
 };
 

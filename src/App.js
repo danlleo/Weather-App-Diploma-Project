@@ -1,14 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import Forecast from "./components/Forecast/Forecast";
 import Search from "./components/Search/Search";
 import WeatherData from "./components/WeatherData/WeatherData";
 import { PuffLoader } from "react-spinners";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./index.css";
+import {
+  fetchData,
+  handleError,
+  handleSuccess,
+} from "./redux/actions/weatherActions";
 
 const App = () => {
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
+  const defaultCity = useSelector((state) => state.defaultCity);
+
+  const dispatch = useDispatch();
+
+  const getWeatherData = async () => {
+    dispatch(fetchData());
+
+    await axios
+      .get(
+        `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${defaultCity}&days=1&aqi=no&alerts=no`
+      )
+      .then((res) => {
+        dispatch(handleSuccess(res.data));
+      })
+      .catch(() => {
+        dispatch(handleError());
+      });
+  };
+
+  useEffect(() => {
+    getWeatherData();
+  }, []);
 
   const dataContainer = () => {
     return (

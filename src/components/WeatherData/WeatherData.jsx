@@ -8,10 +8,13 @@ import {
   WiRaindrop,
   WiDust,
 } from "react-icons/wi";
+import { useSelector } from "react-redux";
 import { MdRemoveRedEye } from "react-icons/md";
 import "./WeatherData.css";
 
 const WeatherData = () => {
+  const weatherData = useSelector((state) => state.data);
+
   return (
     <div className="data-container">
       <div className="data-container__header">
@@ -31,7 +34,7 @@ const WeatherData = () => {
             <h3>sunrise</h3>
           </div>
           <div className="data-list__item-data">
-            <h3>06:47am</h3>
+            <h3>{weatherData?.forecast?.forecastday[0]?.astro?.sunrise}</h3>
             <WiSunrise />
           </div>
         </div>
@@ -40,7 +43,7 @@ const WeatherData = () => {
             <h3>sunset</h3>
           </div>
           <div className="data-list__item-data">
-            <h3>5:04pm</h3>
+            <h3>{weatherData?.forecast?.forecastday[0]?.astro?.sunset}</h3>
             <WiSunset />
           </div>
         </div>
@@ -49,7 +52,7 @@ const WeatherData = () => {
             <h3>precipitation</h3>
           </div>
           <div className="data-list__item-data">
-            <h3>60%</h3>
+            <h3>{weatherData?.current?.precip_mm}%</h3>
             <WiRaindrop />
           </div>
         </div>
@@ -58,7 +61,7 @@ const WeatherData = () => {
             <h3>humidity</h3>
           </div>
           <div className="data-list__item-data">
-            <h3>15%</h3>
+            <h3>{weatherData?.current?.humidity}%</h3>
             <WiHumidity />
           </div>
         </div>
@@ -67,7 +70,7 @@ const WeatherData = () => {
             <h3>wind</h3>
           </div>
           <div className="data-list__item-data">
-            <h3>17 km/h</h3>
+            <h3>{weatherData?.current?.wind_kph} km/h</h3>
             <WiWindy />
           </div>
         </div>
@@ -76,7 +79,7 @@ const WeatherData = () => {
             <h3>pressure</h3>
           </div>
           <div className="data-list__item-data">
-            <h3>1021 hPa</h3>
+            <h3>{weatherData?.current?.pressure_mb} hPa</h3>
             <WiDust />
           </div>
         </div>
@@ -85,7 +88,7 @@ const WeatherData = () => {
             <h3>feels like</h3>
           </div>
           <div className="data-list__item-data">
-            <h3>26.6°</h3>
+            <h3>{weatherData?.current?.feelslike_c}°</h3>
             <WiThermometer />
           </div>
         </div>
@@ -94,7 +97,7 @@ const WeatherData = () => {
             <h3>visibility</h3>
           </div>
           <div className="data-list__item-data">
-            <h3>50km</h3>
+            <h3>{weatherData?.current?.vis_km} km</h3>
             <MdRemoveRedEye />
           </div>
         </div>
