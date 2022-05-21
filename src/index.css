@@ -2,6 +2,7 @@
 
 :root {
   --main-color: #fff;
+  --main-muted-color: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -20,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #112244;
+  background: #568bd0;
 }
 
 .container {

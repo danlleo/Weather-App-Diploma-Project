@@ -42,11 +42,11 @@ const App = () => {
     return (
       <>
         {error ? (
-          <div style={{ marginTop: "4rem" }}>
-            <img
-              src="https://thedigify.com/image/no-search-found.png"
-              alt="not found"
-            />
+          <div style={{ marginTop: "4rem", textAlign: "center" }}>
+            <h1 style={{ color: "var(--main-color)" }}>City Not Found</h1>
+            <h4 style={{ color: "var(--main-muted-color)", marginTop: ".5rem" }}>
+              Try look for another one
+            </h4>
           </div>
         ) : (
           <>
