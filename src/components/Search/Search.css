@@ -17,4 +17,5 @@ form input[type="text"] {
 
 form svg {
   color: var(--main-color);
+  cursor: pointer;
 }

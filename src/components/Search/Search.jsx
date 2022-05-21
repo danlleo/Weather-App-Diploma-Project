@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
+import { BsSearch } from "react-icons/bs";
 import {
   fetchData,
   handleError,
@@ -42,6 +43,7 @@ const Search = () => {
         onChange={(e) => setSearch(e.target.value)}
         autoFocus
       />
+      <BsSearch onClick={handleSubmit} />
     </form>
   );
 };
