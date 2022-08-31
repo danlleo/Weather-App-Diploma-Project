@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
 import axios from "axios";
 import Forecast from "./components/Forecast/Forecast";
 import Search from "./components/Search/Search";
 import WeatherData from "./components/WeatherData/WeatherData";
 import { PuffLoader } from "react-spinners";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 import "./index.css";
 import {
   fetchData,
